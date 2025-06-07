@@ -43,7 +43,7 @@ My configuration for [raf's nvf](https://github.com/NotAShelf/nvf).
         modules = [
           ./home.nix
           {
-            home.packages = [ nvf-config.${system}.default ];
+            home.packages = [ nvf-config.packages.${system}.default ];
           }
         ];
       };
