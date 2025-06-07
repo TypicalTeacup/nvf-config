@@ -2,6 +2,7 @@
   description = "My nvf configuration";
 
   inputs = {
+    flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
     nvf = {
@@ -14,13 +15,14 @@
     self,
     nixpkgs,
     nvf,
-  }: let
-    system = "x86_64-linux";
-    configuration = nvf.lib.neovimConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
-      modules = [./config.nix];
-    };
-  in {
-    packages.${system}.default = configuration.neovim;
-  };
+    flake-utils,
+  }:
+    flake-utils.lib.eachDefaultSystem (system: let
+      configuration = nvf.lib.neovimConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        modules = [./config.nix];
+      };
+    in {
+      packages.default = configuration.neovim;
+    });
 }
