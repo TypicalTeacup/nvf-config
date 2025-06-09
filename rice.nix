@@ -6,9 +6,16 @@
       style = "macchiato";
     };
 
+    ui.noice.enable = true;
+    utility.snacks-nvim = {
+      enable = true;
+      setupOpts = {
+        input.enabled = true;
+        picker.enabled = true;
+      };
+    };
     notes.todo-comments.enable = true;
     treesitter.context.enable = true;
-    ui.noice.enable = true;
     visuals = {
       rainbow-delimiters.enable = true;
       indent-blankline.enable = true;
