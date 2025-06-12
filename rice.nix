@@ -15,7 +15,7 @@
       };
     };
     notes.todo-comments.enable = true;
-    treesitter.context.enable = true;
+    ui.breadcrumbs.enable = true;
     visuals = {
       rainbow-delimiters.enable = true;
       indent-blankline.enable = true;
