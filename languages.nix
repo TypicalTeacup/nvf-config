@@ -1,9 +1,14 @@
-{...}: {
+{pkgs, ...}: {
   vim = {
     lsp.enable = true;
     lsp.formatOnSave = true;
     treesitter.enable = true;
     snippets.luasnip.enable = true;
+
+    treesitter.grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+      ron
+      regex
+    ];
 
     languages = {
       nix.enable = true;
