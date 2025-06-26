@@ -5,8 +5,10 @@
       name = "catppuccin";
       style = "macchiato";
     };
-
-    ui.noice.enable = true;
+    ui.noice = {
+      enable = true;
+      setupOpts.lsp.signature.enabled = true;
+    };
     utility.snacks-nvim = {
       enable = true;
       setupOpts = {

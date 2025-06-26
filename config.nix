@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   imports = [
     ./rice.nix
     ./languages.nix
@@ -42,7 +42,18 @@
 
     binds.whichKey.enable = true;
 
-    autocomplete.blink-cmp.enable = true;
+    autocomplete.blink-cmp = {
+      enable = true;
+      mappings = {
+        next = "<C-j>";
+        previous = "<C-k>";
+        confirm = "<C-CR>";
+        close = "<C-q>";
+      };
+    };
+    # the path source doesn't work without this
+    autocomplete.nvim-cmp.sources = {};
+
     formatter.conform-nvim = {
       enable = true;
 
