@@ -23,6 +23,9 @@
       ts.enable = true;
       tailwind.enable = true;
 
+      sql.enable = true;
+      sql.dialect = "oracle";
+
       enableFormat = true;
       enableTreesitter = true;
       enableExtraDiagnostics = true;
