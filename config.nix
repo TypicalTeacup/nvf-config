@@ -66,6 +66,9 @@
     autopairs.nvim-autopairs.enable = true;
     comments.comment-nvim.enable = true;
 
+    ui.smartcolumn.enable = true;
+    ui.smartcolumn.setupOpts.colorcolumn = "80";
+
     ui.colorizer.enable = true;
     ui.colorizer.setupOpts.filetypes = {
       "*" = {names = false;};
