@@ -34,6 +34,18 @@
         desc = "Browse Files";
         action = "<cmd>Oil<CR>";
       }
+      {
+        mode = "n";
+        key = "<C-d>";
+        silent = true;
+        action = "<C-d>zz";
+      }
+      {
+        mode = "n";
+        key = "<C-u>";
+        silent = true;
+        action = "<C-u>zz";
+      }
     ];
 
     telescope.enable = true;
