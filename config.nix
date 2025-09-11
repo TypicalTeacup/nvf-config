@@ -27,6 +27,7 @@
     };
 
     keymaps = [
+      /*
       {
         mode = "n";
         key = "<leader>e";
@@ -34,6 +35,7 @@
         desc = "Browse Files";
         action = "<cmd>Oil<CR>";
       }
+      */
       {
         mode = "n";
         key = "<C-d>";
@@ -62,6 +64,7 @@
         confirm = "<C-CR>";
         close = "<C-q>";
       };
+      friendly-snippets.enable = true;
     };
     # the path source doesn't work without this
     autocomplete.nvim-cmp.sources = {};
@@ -78,13 +81,20 @@
     autopairs.nvim-autopairs.enable = true;
     comments.comment-nvim.enable = true;
 
-    ui.smartcolumn.enable = true;
-    ui.smartcolumn.setupOpts.colorcolumn = "80";
+    dashboard.alpha = {
+      enable = true;
+      theme = "dashboard";
+    };
 
-    ui.colorizer.enable = true;
-    ui.colorizer.setupOpts.filetypes = {
-      "*" = {names = false;};
-      css = {css = true;};
+    ui = {
+      smartcolumn.enable = true;
+      smartcolumn.setupOpts.colorcolumn = "80";
+
+      colorizer.enable = true;
+      colorizer.setupOpts.filetypes = {
+        "*" = {names = false;};
+        css = {css = true;};
+      };
     };
   };
 }
