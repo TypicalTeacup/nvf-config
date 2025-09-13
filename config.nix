@@ -38,6 +38,13 @@
       */
       {
         mode = "n";
+        key = "<leader>ge";
+        silent = true;
+        desc = "Go error handler";
+        action = "iif err != nil {<CR>return err<CR><BS>}<Esc>k$bh";
+      }
+      {
+        mode = "n";
         key = "<C-d>";
         silent = true;
         action = "<C-d>zz";
