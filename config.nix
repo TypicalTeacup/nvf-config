@@ -41,7 +41,7 @@
         key = "<leader>ge";
         silent = true;
         desc = "Go error handler";
-        action = "iif err != nil {<CR>return err<CR><BS>}<Esc>k$bh";
+        action = "oif err != nil {<CR>}<Esc>Oreturn err<Esc>";
       }
       {
         mode = "n";
