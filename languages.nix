@@ -8,6 +8,7 @@
     treesitter.grammars = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       ron
       regex
+      templ
     ];
 
     languages = {
@@ -30,6 +31,15 @@
       enableFormat = true;
       enableTreesitter = true;
       enableExtraDiagnostics = true;
+    };
+
+    extraPackages = [pkgs.templ pkgs.gopls];
+    lsp.servers = {
+      templ = {
+        cmd = ["${pkgs.templ}/bin/templ" "lsp"];
+        filetypes = ["templ"];
+        root_markers = ["go.mod"];
+      };
     };
   };
 }
