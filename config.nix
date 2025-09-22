@@ -27,15 +27,13 @@
     };
 
     keymaps = [
-      /*
       {
         mode = "n";
-        key = "<leader>e";
+        key = "<leader>bf";
         silent = true;
         desc = "Browse Files";
         action = "<cmd>Oil<CR>";
       }
-      */
       {
         mode = "n";
         key = "<leader>ge";
