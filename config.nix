@@ -56,6 +56,7 @@
     ];
 
     telescope.enable = true;
+    telescope.mappings.findFiles = "<leader>e";
     utility.oil-nvim.enable = true;
     utility.motion.hop.enable = true;
 
