@@ -29,6 +29,13 @@
     keymaps = [
       {
         mode = "n";
+        key = "<leader>u";
+        silent = true;
+        desc = "Undo Tree";
+        action = "<cmd>UndotreeToggle<CR>";
+      }
+      {
+        mode = "n";
         key = "<leader>bf";
         silent = true;
         desc = "Browse Files";
@@ -59,6 +66,7 @@
     telescope.mappings.findFiles = "<leader>e";
     utility.oil-nvim.enable = true;
     utility.motion.hop.enable = true;
+    utility.undotree.enable = true;
 
     binds.whichKey.enable = true;
 
