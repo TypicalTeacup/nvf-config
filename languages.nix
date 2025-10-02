@@ -18,6 +18,7 @@
       java.enable = true;
       python.enable = true;
       go.enable = true;
+      clang.enable = true;
 
       css.enable = true;
       html.enable = true;
